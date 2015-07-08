@@ -28,5 +28,7 @@ If you point to: <your_site_url>/graph/line you will be able to generate a line 
 ##TODO
 
 1 - Still need some adjustments to page layout in order to be more user friendly.
+
 2 - Some test cases need to be generated to check the API.
+
 3 - Some code review and code commenting need to be done, have made this project in a hurry (couple of hours or so) so need to do some checks on it. As it was my first Django project a lot of improvements may be needed.
