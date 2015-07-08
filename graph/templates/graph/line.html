@@ -1,0 +1,36 @@
+<h1>Line Chart</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="#" method="post" id="scatterplot">
+{% csrf_token %}
+	<div>
+		<label for="title">Title</label>
+	    <input type="text" name="title" id="title" value="A title" />
+	</div>
+    <div>
+		<label for="min">Min</label>
+	    <input type="number" name="min" id="min" value="0" />
+	</div>
+    <div>
+	    <label for="max">Max</label>
+	    <input type="number" name="max" id="max" value="0" />
+	</div>
+    <div>
+	    <label for="number_of_series">Number of Series</label>
+	    <input type="number" name="number_of_series" id="number_of_series" value="0" />
+	</div>
+	<div class="error-wrapper"></div>
+
+	<input type="button" value="Submit" id="getlinegraphdatabtn" />
+</form>
+
+<div class="graph-container">
+	
+</div>
+
+{% load staticfiles %}
+
+<script type="text/javascript" src="{% static 'graph/js/libraries/jquery-1.11.3.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'graph/js/libraries/highcharts.js' %}"></script>
+<script type="text/javascript" src="{% static 'graph/js/myapp.js' %}"></script>
